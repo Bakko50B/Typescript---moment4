@@ -1,25 +1,33 @@
-<h1>Kurser</h1>
-@if(error()) {
-    <p class="error">Error: {{ error() }}</p> 
-}
-
-<table id="coursetable">
-  <thead>
-    <tr>
-      <th (click)="sortBy('code')">Kurskod</th>
-      <th (click)="sortBy('coursename')">Kursnamn</th>
-      <th (click)="sortBy('progression')">Progression</th>
-      <th>Länk till kursplan</th>
-    </tr>
-  </thead>
-  <tbody>
-    @for(course of sortedCourses(); track course.code) {  
-      <tr>
-        <td>{{ course.code }}</td>
-        <td>{{ course.coursename }}</td>
-        <td>{{ course.progression }}</td>
-        <td><a [href]="course.syllabus" target="_blank">Visa kursplan</a></td>
-      </tr>
-    }
-  </tbody>
-</table>
+<div id="coursediv">
+    <h1>Kurser</h1>
+    <label for="search">Sök kurskod eller kursnamn:</label>
+    <input id="search" type="text" [value]="searchQuery()" (input)="onSearchInput($event)" placeholder="Sök kurskod eller kursnamn..." />
+    
+    
+    <div class="error">
+        @if(error()) {
+            <p class="error">Error: {{ error() }}</p>
+        }
+    </div>
+    
+    <table id="coursetable">
+      <thead>
+        <tr>
+          <th (click)="sortBy('code')" title="Sortera">Kurskod</th>
+          <th (click)="sortBy('coursename')" title="Sortera">Kursnamn</th>
+          <th (click)="sortBy('progression')" title="Sortera">Prog&shy;ression</th>
+          <th>Länk</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(course of filteredSortedCourses(); track course.code) {
+          <tr>
+            <td>{{ course.code }}</td>
+            <td>{{ course.coursename }}</td>
+            <td>{{ course.progression }}</td>
+            <td><a [href]="course.syllabus" target="_blank">Visa...</a></td>
+          </tr>
+        }
+      </tbody>
+    </table>
+</div>
