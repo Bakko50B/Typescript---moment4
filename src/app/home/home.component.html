@@ -1,1 +1,25 @@
-<p>home works!</p>
+<h1>Kurser</h1>
+@if(error()) {
+    <p class="error">Error: {{ error() }}</p> 
+}
+
+<table id="coursetable">
+  <thead>
+    <tr>
+      <th (click)="sortBy('code')">Kurskod</th>
+      <th (click)="sortBy('coursename')">Kursnamn</th>
+      <th (click)="sortBy('progression')">Progression</th>
+      <th>Länk till kursplan</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(course of sortedCourses(); track course.code) {  
+      <tr>
+        <td>{{ course.code }}</td>
+        <td>{{ course.coursename }}</td>
+        <td>{{ course.progression }}</td>
+        <td><a [href]="course.syllabus" target="_blank">Visa kursplan</a></td>
+      </tr>
+    }
+  </tbody>
+</table>

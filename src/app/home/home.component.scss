@@ -1,0 +1,33 @@
+#coursetable {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  thead {
+    background-color: black;
+    color: white;
+    th{
+        cursor: pointer;
+        padding: 5px 10px;
+        text-align: left;
+        border: 1px solid #ddd; 
+    };
+  }
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: #060606;
+        color: white    
+      }
+      &:hover {
+        background-color: #7f7f7f;
+        color: white;
+      }
+      td{
+        padding: 5px 10px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+    }
+  }
+}
