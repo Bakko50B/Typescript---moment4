@@ -59,10 +59,14 @@
                 cursor: default;
             } 
         }
-        // th:hover{
-        //     background-color: #ffffff;
-        //     color: rgb(11, 2, 109);
-        // }
+        th:hover{
+            background-color: #ffffff;
+            color: black
+        }
+        th:nth-child(4):hover {
+           background-color: inherit;
+              color: inherit;
+        }
     }
 
     tbody {

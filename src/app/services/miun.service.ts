@@ -9,7 +9,7 @@ import { firstValueFrom } from 'rxjs';
 export class MiunService {
 
 
-  url = 'https://webbutveckling.miun.se/files/ramschema.json';
+  private url = 'https://webbutveckling.miun.se/files/ramschema.json';  
 
   constructor(private http: HttpClient ) { }
 
