@@ -11,9 +11,9 @@
   })
   export class HomeComponent {
     courses = signal<Course[]>([]);
-    searchQuery = signal<string>(''); // Sökfält
-    sortKey = signal<keyof Course | null>(null); // Sorteringsfält
-    sortAscending = signal<boolean>(true); // Sorteringsordning
+    searchQuery = signal<string>('');             // Sökfält
+    sortKey = signal<keyof Course | null>(null);  // Sorteringsfält
+    sortAscending = signal<boolean>(true);        // Sorteringsordning
     error = signal<string | null>(null);
   
     constructor(private miunService: MiunService) {}
