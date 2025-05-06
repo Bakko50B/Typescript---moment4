@@ -7,7 +7,7 @@
     <div class="error">
         @if(error()) {
             <p class="error">Error: {{ error() }}</p>
-        }
+        } 
     </div>
     
     <table id="coursetable">
@@ -15,7 +15,7 @@
         <tr>
           <th (click)="sortBy('code')" title="Sortera">Kurskod</th>
           <th (click)="sortBy('coursename')" title="Sortera">Kursnamn</th>
-          <th (click)="sortBy('progression')" title="Sortera">Prog&shy;ression</th>
+          <th (click)="sortBy('progression')" title="Sortera">Prog&shy;ression</th>     
           <th>Länk</th>
         </tr>
       </thead>
