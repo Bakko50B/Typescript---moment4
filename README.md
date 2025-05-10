@@ -45,8 +45,8 @@ För att lösa uppgiften har de olika videoserna i läsanvisningar inspirerat.
 ### Nytt 
 
 Till denna uppgift har några nya tekniker introducerats. Bland annat:  
-*Services
-*Signals
+* Services
+* Signals
 
 ## Av
 Torbjörn Lundberg,  tolu2403@student.miun.se 
