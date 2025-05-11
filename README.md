@@ -10,7 +10,7 @@ För att starta en utvecklingsserver, run:
 ng serve
 ```
 
-*Här följer standardinformation*
+* *Här följer standardinformation som Angular genererar*
 ## Code scaffolding
 
 Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
@@ -38,6 +38,8 @@ This will compile your project and store the build artifacts in the `dist/` dire
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+* *Slut - standardkommentarer*
 
 # Momentets teknik
 För att lösa uppgiften har de olika videoserna i läsanvisningar inspirerat.
